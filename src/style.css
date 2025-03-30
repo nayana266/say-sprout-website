@@ -1,0 +1,57 @@
+/* Ensure body covers the entire screen */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* Label positioning */
+.label {
+    height: 58px;
+    width: 264px;
+    position: absolute;
+    top: 5%; /* Adjust the label slightly towards the top */
+    left: 30%; /* Adjust the label slightly towards the left */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Label text inside the wrapper */
+.label .text-wrapper {
+    color: #000000;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+
+/* Image styling */
+img {
+    position: absolute;  /* Position the image absolutely relative to the body */
+    top: 56%;            /* Move the image down by 50% of the container's height */
+    left: 50%;           /* Move the image right by 50% of the container's width */
+    transform: translate(-50%, -50%);  /* Adjust the position to truly center it */
+    max-width: 40%;      /* Limit the image width to 40% of the container */
+    height: auto;        /* Keep the aspect ratio intact */
+    border: 4px solid #8399C1;  /* Adds a purple border with the color #8399C1 */
+    border-radius: 8px;  /* Optional: adds rounded corners */
+}
+
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centers the text */
+    font-family: "Pixelify Sans", sans-serif;  /* Apply Pixelify Sans */
+    font-size: 36px;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+}
