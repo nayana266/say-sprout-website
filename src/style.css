@@ -1,4 +1,5 @@
 /* Ensure body covers the entire screen */
+
 body {
     display: flex;
     justify-content: center;
@@ -103,4 +104,13 @@ img {
   
   
 
+  .newpage-blank {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white; /* Ensures a blank white page */
+    z-index: 9999; /* Puts it on top */
+}
 

@@ -1,31 +1,47 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Image from './Image';
 import Button from './Button';
-import { Label } from "./Label";
+import { Label } from './Label';
 import NewPage from './NewPage';
+import './style.css';
+import './index.css';
 
-function App() {
+function HomePage() {
   return (
-    <Router>
-      <div className="container">
-        <Image />
-        <Label />
-        
-        {/* Centered Text */}
-        <div className="center-text">
-          <p>Let's</p>
-          <p>Sprout</p>
-          <p>Your Plant!</p>
-        </div>
+    <div className="container">
+      <Image />
+      <Label />
 
-        <Button />
+      {/* Centered Text */}
+      <div className="center-text">
+        <p>Let's</p>
+        <p>Sprout</p>
+        <p>Your Plant!</p>
       </div>
-      <Routes>  
-        <Route path="/newpage" element={<NewPage />} />
-      </Routes>
-    </Router>
+
+      <Button />
+    </div>
   );
 }
 
-export default App;
+function App() {
+  const location = useLocation();
+
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/newpage" element={<NewPage />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default function Main() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}

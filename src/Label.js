@@ -1,11 +1,11 @@
 // Label.js
-import React from "react";
-import "./style.css";  // Ensure this is pointing to the correct CSS file
+import React from 'react';
+import './style.css';  // Ensure the correct path to your CSS
 
 export const Label = () => {
-    return (
-        <div className="label">
-            <div className="text-wrapper">Say Sprout</div>
-        </div>
-    );
+  return (
+    <div className="label">
+      <div className="text-wrapper">Say Sprout</div>
+    </div>
+  );
 };
