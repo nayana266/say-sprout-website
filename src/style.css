@@ -1,5 +1,4 @@
 /* Ensure body covers the entire screen */
-
 body {
     display: flex;
     justify-content: center;
@@ -14,8 +13,8 @@ body {
     height: 58px;
     width: 264px;
     position: absolute;
-    top: 5%; /* Adjust the label slightly towards the top */
-    left: 30%; /* Adjust the label slightly towards the left */
+    top: 5%;
+    left: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,86 +30,168 @@ body {
     line-height: normal;
 }
 
-
-/* Image styling */
-img {
-    position: absolute;  /* Position the image absolutely relative to the body */
-    top: 56%;            /* Move the image down by 50% of the container's height */
-    left: 50%;           /* Move the image right by 50% of the container's width */
-    transform: translate(-50%, -50%);  /* Adjust the position to truly center it */
-    max-width: 40%;      /* Limit the image width to 40% of the container */
-    height: auto;        /* Keep the aspect ratio intact */
-    border: 4px solid #8399C1;  /* Adds a purple border with the color #8399C1 */
-    border-radius: 8px;  /* Optional: adds rounded corners */
+/* Only affects the image on the start screen */
+.start-image {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 40%;
+    height: auto;
+    border: 4px solid #8399C1;
+    border-radius: 8px;
 }
 
-
+/* Start screen center text */
 .center-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  /* Centers the text */
-    font-family: "Pixelify Sans", sans-serif;  /* Apply Pixelify Sans */
+    transform: translate(-50%, -50%);
+    font-family: "Pixelify Sans", sans-serif;
     font-size: 36px;
     color: #000000;
     font-weight: 400;
     text-align: center;
 }
 
-
-.start-button {
-    position: absolute;
-    top: 85%; /* Adjust to move lower */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    /* Make the button bigger */
-    padding: 15px 30px;
-    font-size: 24px;
-    
-    /* Apply Pixelify Sans font */
-    font-family: "Pixelify Sans", sans-serif;
-    
-    cursor: pointer;
-    background-color: #8399C1;
-    color: black;
-
-    /* Border styles */
-    border: 4px solid #AAC9B9; /* Change border color here */
-    border-radius: 12px; /* Round edges */
-    
-    z-index: 10;
-}
-
-
-.container {
-    position: relative;
-    width: 100vw;
-    height: 100vh; /* Full screen */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers vertically */
-    align-items: center; /* Centers horizontally */
-}
-
 .center-text p {
     color: #374C5F;
     text-align: center;
-    font-size: 65px; /* Adjust font size as needed */
+    font-size: 65px;
     margin: 0;
-    
-    letter-spacing: 2px; /* Adjust the value for the desired spacing */
-  }
-  
-  
+    letter-spacing: 2px;
+}
 
-  .newpage-blank {
+/* Start button styling */
+.start-button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 24px;
+    font-family: "Pixelify Sans", sans-serif;
+    cursor: pointer;
+    background-color: #8399C1;
+    color: black;
+    border: 4px solid #AAC9B9;
+    border-radius: 12px;
+    z-index: 10;
+}
+
+/* Main container for start page */
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* White overlay (optional) */
+.newpage-blank {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: white; /* Ensures a blank white page */
-    z-index: 9999; /* Puts it on top */
+    background-color: white;
+    z-index: 9999;
 }
 
+/* === NewPage styles === */
+
+.newpage-container {
+    background-color: #b8d1c5;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Pixelify Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.confetti-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem; /* spacing under Say Sprout */
+}
+.confetti-box {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 588px;              /* 🔥 Fixed size */
+    height: 588px;             /* Matches your start page shape */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid #8399C1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 1.8rem;
+    padding: 1.2rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-img {
+    width: 90px;          /* Bigger! */
+    height: 90px;
+    image-rendering: pixelated;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  
+  .icon-btn {
+    margin-top: 0.4rem;
+    background-color: #b6c3d1;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-family: 'Pixelify Sans', sans-serif;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #8ba3a7;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 6px;
+  }
+  .icon-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #b6c3d1, 2px 2px 0px #8ba3a7;
+  }
+  
+  
+  .icon-item:hover .icon-img {
+    animation: bounce 0.4s ease;
+    transform: scale(1.1); /* slight grow on hover */
+  }
+  
+  @keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-8px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+  }
+  
