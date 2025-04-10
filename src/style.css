@@ -10,15 +10,25 @@ body {
 
 /* Label positioning */
 .label {
-    height: 58px;
-    width: 264px;
-    position: absolute;
-    top: 5%;
-    left: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 58px;
+  width: 264px;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.text-wrapper {
+  color: #000000;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+
+
 
 /* Label text inside the wrapper */
 .label .text-wrapper {
@@ -184,7 +194,8 @@ body {
   
   .icon-item:hover .icon-img {
     animation: bounce 0.4s ease;
-    transform: scale(1.1); /* slight grow on hover */
+    transform: scale(1.1); 
+    
   }
   
   @keyframes bounce {
