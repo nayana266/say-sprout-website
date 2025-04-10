@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ import this
 import './style.css';
 import { Label } from './Label';
 
@@ -8,8 +9,9 @@ import succulent from './plants/succulent.png';
 import blueberry from './plants/blueberry.png';
 import confettiBackground from './background.jpeg';
 
-
 function NewPage() {
+  const navigate = useNavigate(); // ✅ use navigate hook
+
   return (
     <div className="newpage-container">
       <Label />
@@ -22,20 +24,36 @@ function NewPage() {
           <div className="icon-grid">
             <div className="icon-item">
               <img src={leaf} alt="Leaf Icon" className="icon-img" />
-              <button className="icon-btn">word blast</button>
+              <button
+                className="icon-btn"
+                onClick={() => navigate('/wordblast')} // ✅ wired!
+              >
+                word blast
+              </button>
             </div>
+
+            {/* Keep the rest the same for now */}
             <div className="icon-item">
-              <img src={cactus} alt="Cactus Icon" className="icon-img" />
-              <button className="icon-btn">sound match</button>
-            </div>
-            <div className="icon-item">
-              <img src={succulent} alt="Succulent Icon" className="icon-img" />
-              <button className="icon-btn">rhyme racer</button>
-            </div>
-            <div className="icon-item">
-              <img src={blueberry} alt="Blueberry Icon" className="icon-img" />
-              <button className="icon-btn">story mode</button>
-            </div>
+  <img src={cactus} alt="Cactus Icon" className="icon-img" />
+  <button className="icon-btn" onClick={() => navigate('/soundmatch')}>
+    sound match
+  </button>
+</div>
+
+<div className="icon-item">
+  <img src={succulent} alt="Succulent Icon" className="icon-img" />
+  <button className="icon-btn" onClick={() => navigate('/rhymeracer')}>
+    rhyme racer
+  </button>
+</div>
+
+<div className="icon-item">
+  <img src={blueberry} alt="Blueberry Icon" className="icon-img" />
+  <button className="icon-btn" onClick={() => navigate('/storymode')}>
+    story mode
+  </button>
+</div>
+
           </div>
         </div>
       </div>
