@@ -205,4 +205,42 @@ body {
     70%  { transform: translateY(-4px); }
     100% { transform: translateY(0); }
   }
+ .prompt-label {
+  font-weight: 500;
+  
+  font-size: 2rem;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+
+
+  
+  .word-box {
+    background-color: #A5B5E2;
+    width: 300px;
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 8px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mic-label {
+    font-size: 2rem;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .mic-icon {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    image-rendering: pixelated;
+    cursor: pointer;
+  }
   
