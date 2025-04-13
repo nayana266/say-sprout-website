@@ -242,5 +242,151 @@ body {
     margin-top: 10px;
     image-rendering: pixelated;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
+  
+  .mic-icon.recording {
+    animation: pulse-red 1.5s infinite;
+    filter: hue-rotate(300deg);
+  }
+  
+  @keyframes pulse-red {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+/* Audio playback container */
+.audio-playback-container {
+  margin: 15px 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.word-audio {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Controls container */
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Loading indicator */
+.loading {
+  margin-top: 10px;
+  color: #4CAF50;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+/* Feedback box */
+.feedback-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-box h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.feedback-box p {
+  margin-bottom: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.error-message {
+  background-color: rgba(255, 87, 87, 0.9);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.transcription-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.transcription-box h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.transcription-box p {
+  margin: 0;
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.confidence-score {
+  margin-top: 15px;
+}
+
+.score-bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+.confidence-score p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
   
